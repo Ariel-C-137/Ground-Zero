@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <article>
+        <h1>Orfebrería</h1>
+        <div class="gallery">
+            <!-- Aquí puedes iterar sobre las esculturas utilizando el modelo correspondiente -->
+            {% for orfebrería in orfebrerías %}
+                <div class="artwork">
+                    <h2>{{ tejido.titulo }}</h2>
+                    <p>Artista: {{ escultura.artista }}</p>
+                    <img src="{{ tejido.imagen.url }}" alt="{{ tejido.titulo }}">
+                </div>
+            {% endfor %}
+        </div>
+    </article>
+    {% endblock %}
+    
+</body>
+</html>

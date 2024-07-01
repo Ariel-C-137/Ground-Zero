@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <article>
+        <h1>Contáctanos</h1>
+        <p>¿Tienes alguna pregunta o comentario?</p>
+        <p>Estamos aquí para ayudarte. Contáctanos a través de los siguientes medios:</p>
+        <ul>
+            <li>Teléfono: +123456789</li>
+            <li>Email: info@groundzero.com</li>
+            <li>Visítanos en nuestras redes sociales:</li>
+            <li><a href="{% url 'facebook_page' %}">Facebook</a></li>
+            <li><a href="{% url 'instagram_page' %}">Instagram</a></li>
+        </ul>
+    </article>
+    {% endblock %}
+    
+
+</body>
+</html>

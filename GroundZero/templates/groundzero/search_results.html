@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+
+{% block content %}
+<article>
+    <h1>Resultados de la Búsqueda</h1>
+    <div class="gallery">
+        {% for result in results %}
+            <div class="artwork">
+                <h2>{{ result.title }}</h2>
+                <p>Artista: {{ result.artist }}</p>
+                <img src="{{ result.image.url }}" alt="{{ result.title }}">
+            </div>
+        {% empty %}
+            <p>No se encontraron resultados.</p>
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}
+
+    
+</body>
+</html>

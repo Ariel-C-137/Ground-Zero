@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+
+{% block content %}
+<article>
+    <h1>Esculturas</h1>
+    <div class="gallery">
+        <!-- Aquí puedes iterar sobre las esculturas utilizando el modelo correspondiente -->
+        {% for escultura in esculturas %}
+            <div class="artwork">
+                <h2>{{ escultura.titulo }}</h2>
+                <p>Artista: {{ escultura.artista }}</p>
+                <img src="{{ escultura.imagen.url }}" alt="{{ escultura.titulo }}">
+            </div>
+        {% endfor %}
+    </div>
+</article>
+{% endblock %}
+
+
+    
+</body>
+</html>

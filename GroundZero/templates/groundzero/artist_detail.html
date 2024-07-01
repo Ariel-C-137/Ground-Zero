@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+
+{% block content %}
+<article>
+    <h1>Detalles del Artista</h1>
+    <h2>{{ artista.nombre }}</h2>
+    <p><strong>Apellido:</strong> {{ artista.apellido }}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{ artista.fecha_nacimiento }}</p>
+    <p><strong>Nacionalidad:</strong> {{ artista.nacionalidad }}</p>
+    <p><strong>Biografía:</strong> {{ artista.biografia }}</p>
+</article>
+{% endblock %}
+
+    
+</body>
+</html>
